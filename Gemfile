@@ -9,7 +9,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-html-sanitizer', '1.0.1'
-gem 'bootstrap-sass',   '3.2.0.0'
+gem 'bootstrap-sass',   '~>3.2.0.0'
+gem 'autoprefixer-rails'
 gem 'rb-readline'
 
 

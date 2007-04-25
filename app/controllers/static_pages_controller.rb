@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+
+  layout :resolve_layout
+
   def home
   end
 
@@ -7,4 +10,14 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  private
+    def resolve_layout
+      case action_name
+      when "home"
+        "home"
+      else
+        "application"
+      end
+    end
 end

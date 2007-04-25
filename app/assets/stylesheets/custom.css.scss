@@ -1,0 +1,31 @@
+.main-content {
+  margin-top: 70px;
+}
+
+.fill{
+  background: url(image_path("bg1.jpg")) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;  
+}
+
+.htextsmall{
+  font-family: 'Playball', cursive;
+  color: white;
+  font-size: 35px;
+}
+
+.htext{
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 50px;
+  margin: 75px 0px 0px 0px;
+  text-align: center;
+}
+
+.actionbtn{
+  margin: 15px 15px 0 0;
+}
