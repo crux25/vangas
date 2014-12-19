@@ -1,0 +1,4 @@
+class ActivatedController < ApplicationController
+  def Active
+  end
+end

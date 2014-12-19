@@ -11,10 +11,16 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse pull-right">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><%= link_to "Who we are", "#" %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Who we are", about_path%></li>
         <li><%= link_to "What we do", "#" %></li>
-        <li><%= link_to "Members login", "#" %></a></li>
+        <li><%= link_to "contact us", contact_path %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "sign up", new_user_registration_path %></li>
+          <li><%= link_to "login", new_user_session_path %></li>
+       <% end %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

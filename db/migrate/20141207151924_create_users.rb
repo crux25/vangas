@@ -1,20 +1,21 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-      t.string :name
-      t.string :department
+      t.string :name, null: false
+      t.string :department, null: false
       t.string :class
       t.string :traker_name
       t.string :address
       t.string :phone
       t.date :birthday
-      t.string :email
+      t.string :email, null: false, unique: true
       t.string :team
       t.string :status
-      t.boolean :activated
+      t.boolean :activated, default: false
       t.text :about
 
       t.timestamps null: false
     end
+     add_index :users, [:name, :email]
   end
 end

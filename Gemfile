@@ -12,6 +12,10 @@ gem 'rails-html-sanitizer', '1.0.1'
 gem 'bootstrap-sass',   '~>3.2.0.0'
 gem 'autoprefixer-rails'
 gem 'rb-readline'
+gem 'devise'
+gem 'rake', '~>10.4.2'
+gem 'arel', '6.0.0.beta2'
+gem 'will_paginate'
 
 
 group :development, :test do
