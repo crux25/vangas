@@ -3,7 +3,6 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :name, null: false
       t.string :department, null: false
-      t.string :class
       t.string :traker_name
       t.string :address
       t.string :phone
