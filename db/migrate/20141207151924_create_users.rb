@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :address
       t.string :phone
       t.date :birthday
-      t.string :email, null: false, unique: true
       t.string :team
       t.string :status
       t.boolean :activated, default: false
