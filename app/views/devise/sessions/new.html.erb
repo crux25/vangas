@@ -6,7 +6,7 @@
   
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
  
-    <%= f.email_field :email, placeholder: "Email", autofocus: true %>
+    <%= f.email_field :email, placeholder: "Email" %>
     <%= f.password_field :password, placeholder: "Password", autocomplete: "off" %>
   
 
@@ -15,7 +15,7 @@
       <%= f.check_box :remember_me %>
       <span>Remember me on this device</span>
     <% end %>
-  <% end -%>
+  <% end %>
   
   <%= f.submit "Log in", class: "btn btn-primary" %>
 <% end %>
