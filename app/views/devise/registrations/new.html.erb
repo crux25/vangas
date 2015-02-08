@@ -12,7 +12,7 @@
 
     <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password confirmation", class: "form-control" %>
     <h5 class="born_on_text">Born on?</h5>
-    <%= date_select("user", "born_on", start_year: 1960, end_year: 1999, class: "born_date form-control") %> 
+    <%= f.date_select("born_on", start_year: 1960, end_year: 1999, class: "born_date form-control") %> 
    
 
     <%= f.select :department, options_for_select([["Select department", ""], ["Electrical Electronics Eng.", "Electrical"], ["Mechanical Eng.", "Mechanical"], ["Petroleum Eng.", "Petroleum"], ["Gas Eng.", "Gas" ], ["Civil Eng.", "Civil"]],"" ), {}, {class: "form-control"} %>
