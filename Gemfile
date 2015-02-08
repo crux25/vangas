@@ -16,6 +16,7 @@ gem 'devise'
 gem 'rake', '~>10.4.2'
 gem 'arel', '6.0.0.beta2'
 gem 'will_paginate'
+gem 'omniauth-facebook'
 
 
 group :development, :test do

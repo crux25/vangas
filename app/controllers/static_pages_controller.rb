@@ -1,8 +1,12 @@
 class StaticPagesController < ApplicationController
+  before_action :authenticate_user!, except: [:home, :about, :contact]
 
   layout :resolve_layout
 
   def home
+    if user_signed_in?
+      render layout: "application"
+    end
   end
 
   def about
@@ -14,7 +18,7 @@ class StaticPagesController < ApplicationController
   private
     def resolve_layout
       case action_name
-      when "home"
+      when "home" 
         "home"
       else
         "application"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218101239) do
+ActiveRecord::Schema.define(version: 20150203152345) do
 
   create_table "posts", force: true do |t|
     t.text     "content"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20141218101239) do
     t.string   "traker_name"
     t.string   "address"
     t.string   "phone"
-    t.date     "birthday"
+    t.date     "born_on"
     t.string   "team"
     t.string   "status"
     t.boolean  "activated",              default: false
