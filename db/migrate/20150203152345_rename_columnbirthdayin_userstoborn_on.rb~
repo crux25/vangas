@@ -1,0 +1,4 @@
+class RenameColumnbirthdayinUserstobornOn < ActiveRecord::Migration
+  def change
+  end
+end
