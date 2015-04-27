@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
 
   def home
     if user_signed_in?
+      @posts = Post.all
       render layout: "application"
     end
   end

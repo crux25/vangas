@@ -1,0 +1,14 @@
+<li id="post-<%= post.id %>">
+  <%= link_to(post.user class: "profile_pic") do %>
+     <%= image_tag("http://placehold.it/50x50", class: "img-responsive profile_pic")%>
+  <% end %>
+
+  <span class="user"><%= link_to post.user.name, post.user %></span>
+   
+   <span class="content"><p> <%= post.content %></p></span>
+
+   <span class="post-supports"> <%= time_ago_in_words(post.created_at) %> ago | <%= pluralize(post.comments.count, 'Comment')%>  </span>
+   <%= form_tag do %>
+     <%= text_area :comment, :content, class: "form-control", placeholder: "Your comment?" %>
+   <% end %>
+</li>

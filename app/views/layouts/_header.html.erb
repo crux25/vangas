@@ -17,6 +17,7 @@
     <div id="navbar" class="collapse navbar-collapse pull-right">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
+          <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Members", users_path %></li>
           <li><%= link_to "#"  do %>
               Messages <span class="badge">10</span>

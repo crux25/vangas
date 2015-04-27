@@ -11,6 +11,9 @@
         <div class="item active">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
+            <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %>"><%= message %></div><!-- not the final implimentation -->
+            <% end %>
             <div class="carousel-caption">
               <h1>Example headline.</h1>
               <p>Acess uniport acess uniport acess uniport acess uniport acess uniport acess uniport acess uniport acess uniport acess uniport acess uniport acess uniport</p>

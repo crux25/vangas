@@ -1,1 +1,17 @@
-<h3>welcome</h3>
+<% flash.each do |message_type, message| %>
+  <!-- empty flash buffer -->
+<% end %>
+
+<row>
+  <div class="col-md-6 col-md-offset-3 post-textarea">
+    <%= form_tag ('/posts') do %>
+     <%= text_area_tag :post, nil, class: "form-control postarea", placeholder: "Your post?" %>
+     <%= submit_tag "Post", class: "btn btn-primary post-btn"%>
+    <% end %>
+  </div>
+  <div class="col-md-6 col-md-offset-3 posts">
+    <ol>
+      <%= render @posts %>
+    </ol>
+  </div>
+</row>

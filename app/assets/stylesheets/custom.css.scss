@@ -3,6 +3,7 @@
 
 .main-content {
   margin-top: 60px;
+  background: #f5f8fa;
 }
 
 
@@ -268,4 +269,105 @@ select#user_born_on_1i, select#user_born_on_2i, select#user_born_on_3i {
 #flash_alert {
   color: red;
   margin-bottom: 5px;
+}
+
+/* user */
+.users {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  list-style: none;
+  ul {
+    padding-left: 5px;
+    li {
+      overflow: auto;
+      padding: 10px 0;
+      border-bottom: 1px solid $gray-lighter;
+    }
+  }
+  .user-img{
+    display: inline-block;
+    vertical-align: top;
+    img{
+      border-radius: 5px;
+    }
+  }
+
+  .user-info{
+    margin: 0 0 0 5px;
+    display: inline-block;
+    .full_name{
+      font-size: 18px;
+      font-weight: bold;
+      color: #292f33;
+    }
+    .msg-btn{
+    }
+  }
+}
+
+.posts {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  
+  ol{
+    list-style: none;
+    padding: 5px;
+    li {
+      overflow: visible;
+      padding: 10px 0;
+      border-bottom: 1px solid $gray-lighter;
+      text-align: justify;
+      line-break: normal;
+    }
+  }
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .post-supports{
+    color: $gray-light;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .profile_pic{
+    border-radius: 10%;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+textarea#comment_content{
+  margin-top: 10px;
+}
+
+.post-textarea{
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+   form{
+     border: 1px solid #ccc;
+     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.09);
+     border-radius: 4px;
+     background-color: #f5f5f5;
+   } 
+  .post-btn{
+    max-width: 15%;
+    margin-top: 3px;
+  }
+
+  .postarea{
+    border: 0;
+  }
 }

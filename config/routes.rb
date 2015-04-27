@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
  
   devise_for :users
-  resources :users
-  resources :posts
+  resources :users, except: [:new, :create]
+  resources :posts, only: [:create, :update, :delete]
   
   get 'about' => 'static_pages#about'
 
