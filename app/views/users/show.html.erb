@@ -2,17 +2,16 @@
 <% end %>
 
 <div row>
-  <div class="col-md-8 col-md-offset-2">
-    <%= image_tag("http://placehold.it/200X200", alt: "#{current_user.name} profile picture", class: "img-responsive center-block profile_image") %>
-
-    <p>
-      <strong>Name:</strong>
-      <%= @user.name %>
-    </p>
-
-    <h4>
-      <%= @user.about %>
-    </h4>
+  <div class="col-md-6 col-md-offset-3 user">
+    <div class="profile-pic">
+      <%= image_tag("http://placehold.it/200X200", alt: "#{current_user.name} profile picture", class: "img-responsive center-block profile_image") %>
+    </div>
+ 
+   <div class="user-details">
+     <div class="name-and-bio">
+     <strong class="name"> <%= @user.name %> </strong><br>
+     <small> <%= @user.bio %> </small>
+    </div>
 
     <p>
       <strong>Department:</strong>
@@ -32,31 +31,32 @@
     <p>
      <strong>Born on?:</strong>
      <%= @user.born_on %>
-</p>
+   </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+   <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
 
-<p>
-  <strong>Team:</strong>
-  <%= @user.team %>
-</p>
+  <p>
+   <strong>Team:</strong>
+   <%= @user.team %>
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @user.status %>
-</p>
+  <p>
+   <strong>Status:</strong>
+   <%= @user.status %>
+  </p>
 
-<p>
-  <strong>Activated:</strong>
-  <%= @user.activated %>
-</p>
+  <p>
+   <strong>Activated:</strong>
+   <%= @user.activated %>
+  </p>
 
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+   <%= link_to 'Edit', edit_user_path(@user) %> |
+   <%= link_to 'Back', users_path %>
+   </div>   
   </div>
 </div>

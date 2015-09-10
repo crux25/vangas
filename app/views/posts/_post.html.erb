@@ -9,7 +9,15 @@
    <span class="content"><p> <%= post.content %></p></span>
 
    
-   <%= form_tag do %>
-     <%= text_area :comment, :content, class: "form-control", placeholder: "Your comment?" %>
+   <%= form_tag ('/comments') do %>
+     <%= hidden_field_tag :post_id, post.id %>
+     <%= text_area :comment, :content, class: "form-control", placeholder: "Add a comment" %>
+     <%= submit_tag 'Post' %>
+   <% end %>
+
+   <% if post.comments.any? %>
+     <% post.comments.each do |comment|%>
+       <div> <%= comment.content %> <div>
+     <% end %>
    <% end %>
 </li>

@@ -5,13 +5,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-  def after_sign_in_path_for(user)
-    activate_path
-  end
+  
 
   protected
 
+    def after_sign_in_path_for(user)
+      activate_path
+    end
+
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) << :name << :department << :born_on
+      devise_parameter_sanitizer.for(:sign_up) << :name << :department << :born_on << :level
     end
 end

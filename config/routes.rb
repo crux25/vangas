@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
  
+  get 'comments/create'
+
+  get 'comments/update'
+
+  get 'comments/destroy'
+
   devise_for :users
   resources :users, except: [:new, :create]
   resources :posts, only: [:create, :update, :delete]
+  resources :comments, only: [:create, :update, :delete]
   
   get 'about' => 'static_pages#about'
 

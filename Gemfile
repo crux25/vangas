@@ -18,7 +18,7 @@ gem 'arel', '6.0.0.beta2'
 gem 'will_paginate'
 gem 'omniauth-facebook'
 gem 'autosize-rails'
-
+gem 'sprockets-rails'
 
 group :development, :test do
   gem 'byebug',       '~>3.4.0'

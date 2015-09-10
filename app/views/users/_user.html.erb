@@ -1,15 +1,19 @@
 <li>  
 <div class="user-img">
     <%= link_to user_path(user), class: "img-responsive" do %>
-      <%= image_tag("http://placehold.it/75x75") %>
+      <%= image_tag("http://placehold.it/50x50") %>
     <% end %>
   </div>
   <div class="user-info"> 
     
-     <%= link_to user.name, user_path(user), class: "full_name" %>
-
-    <h5>
-    </h5>
-    <%= link_to "Send message", "#", class: "btn btn-primary btn-xs msg-btn" %>
+    <%= link_to user.name, user_path(user), class: "full_name" %>
+    <% if user.bio %> 
+      <div class="user-bio">
+        <%= user.bio %>
+      </div>
+    <% end %>
+    <div class="user-options">
+      <%= link_to "Message", "#", class: "msg-link" %> | <%= link_to "Profile", user_path(user), class: "profile_link" %>
+    </div>
   </div>
 </li>

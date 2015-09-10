@@ -15,7 +15,9 @@
     <%= f.date_select("born_on", start_year: 1960, end_year: 1999, class: "born_date form-control") %> 
    
 
-    <%= f.select :department, options_for_select([["Select department", ""], ["Electrical Electronics Eng.", "Electrical"], ["Mechanical Eng.", "Mechanical"], ["Petroleum Eng.", "Petroleum"], ["Gas Eng.", "Gas" ], ["Civil Eng.", "Civil"]],"" ), {}, {class: "form-control"} %>
+    <%= f.select :department, options_for_select([["Select department", ""], ["Electrical Electronics Eng.", "Electrical Electronics Eng"], ["Mechanical Eng.", "Mechanical Eng"], ["Petroleum Eng.", "Petroleum Eng"], ["Gas Eng.", "Gas Eng" ], ["Civil Eng.", "Civil Eng"]],"" ), {}, {class: "form-control"} %>
+
+<%= f.select :level,  options_for_select([["Level", ""], ["L100", "L100"], ["L200", "L200"], ["L300", "L300"], ["L400", "L400"], ["L500", "L500"]], ""), {}, {class: "form-control"} %>
 
 
     <%= f.submit "Sign up", class: "btn btn-primary btn-block signbutton" %>

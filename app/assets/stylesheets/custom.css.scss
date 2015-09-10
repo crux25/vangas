@@ -11,6 +11,7 @@
   font-family: 'Playball', cursive;
   color: white;
   font-size: 35px;
+
 }
 
 .htext{
@@ -273,6 +274,7 @@ select#user_born_on_1i, select#user_born_on_2i, select#user_born_on_3i {
 
 /* user */
 .users {
+  margin-top: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background: white;
@@ -297,11 +299,13 @@ select#user_born_on_1i, select#user_born_on_2i, select#user_born_on_3i {
     margin: 0 0 0 5px;
     display: inline-block;
     .full_name{
-      font-size: 18px;
-      font-weight: bold;
+      display: block;
+      font-size: 15px;
+      font-weight: normal;
       color: #292f33;
     }
-    .msg-btn{
+    .user-options{
+     
     }
   }
 }
@@ -369,5 +373,26 @@ textarea#comment_content{
 
   .postarea{
     border: 0;
+  }
+}
+
+.user{
+  margin-top: 20px;
+  .profile-pic{
+    img{
+      border: 5px solid white;
+      border-radius: 15px;
+    }
+  }
+
+  .user-details{
+    padding-top: 10px;
+    .name-and-bio{
+      text-align: center;
+      .name{
+        font-size: 20px;
+        line-height: 0;
+      }
+    }
   }
 }
